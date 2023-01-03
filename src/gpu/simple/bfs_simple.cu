@@ -118,7 +118,7 @@ void bfsGPU(int start, Graph &G, vector<int> &distance, vector<bool> &visited) {
 	cudaMemcpy(&distance[0], d_distance, size, cudaMemcpyDeviceToHost);
 	auto endTime = std::chrono::steady_clock::now();
 	auto duration = chrono::duration_cast<chrono::milliseconds>(endTime - startTime).count();
-	printf("Elapsed time for naive linear GPU implementation (without copying graph) : %li ms.\n", duration);
+	printf("Elapsed time for naive linear GPU implementation : %li ms.\n", duration);
 
 	// Cleanup
 	cudaFree(d_adjacencyList);
