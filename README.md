@@ -27,17 +27,12 @@ As described in Merill et. al our strategy is following:
 * use local prefix sum in place of local atomic operations for determining enqueue offsets
 * use a best-effort bitmask for efficient neighbor filtering
 
-## Requirements: 
 
-* gtest (https://github.com/google/googletest) for testing
 
 ## Running instructions:
 1. Compile the program with `./compile`
 2. Run the program inputing data source. For example `./bfs_main < data/4elt.graph`
 
-The source code has options to read graphs provided both as AdjacencyList and list of edges and this is specified by Format argument in a constructor.
 
-## Credits
 
-* D. Merill, M. Garland, A. Grimshaw  "Scalable GPU Graph Traversal": https://research.nvidia.com/publication/scalable-gpu-graph-traversal
-* Github user rafalk342 (https://github.com/rafalk342/bfs-cuda) whose repo helped me get started with implementation of my first code running on GPU with cuda.
+
